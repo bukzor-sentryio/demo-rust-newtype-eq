@@ -43,4 +43,9 @@ impl PartialEq<Old> for New {
         self == &other
     }
 }
+impl PartialEq<New> for Old {
+    fn eq(&self, other: &New) -> bool {
+        other == self
+    }
+}
 impl Eq for New {}
